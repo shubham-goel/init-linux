@@ -1,0 +1,13 @@
+Tilda,tilda, 
+Wine,wine,ppa,buntu-wine/ppa
+Winetricks (Wine extension),winetricks 
+Steam,steam
+Git,git
+Sublime3,sublime-text-installer,ppa,ebupd8team/sublime-text-3
+Linuxdc++,linuxdc++
+Texlive-base,texlive-base
+Texlive-full,texlive-full
+Vlc,vlc
+Synaptic package manager,synaptic
+Java Runtime Environment,default-jre
+Java Development Kit,default-jdk

@@ -13,19 +13,21 @@ script_name = {
 "package":"install-package.sh",
 "chrome":"install-chrome.sh"
 }
-packages = {
-"tilda":["tilda",None], 
-"wine":["wine","ppa:ubuntu-wine/ppa"],
-"winetricks (Wine extension)":["winetricks",None], 
-"steam":["steam",None],
-"git":["git",None],
-"sublime3":["sublime-text-installer","ppa:webupd8team/sublime-text-3"],
-"linuxdc++":["linuxdc++",None],
-"texlive-base":["texlive-base",None],
-"texlive-full":["texlive-full",None],
-"vlc":["vlc",None],
-"Synaptic package manager":["synaptic",None]
-}
+
+def get_packages():
+	packages = {}
+	with open('settings/packages.csv') as f:
+		content = f.readlines()
+	for line in content:
+		spl = line.strip().split(',')
+		if len(spl) >= 3 and spl[2] != '':
+			new_pkg = [spl[1],spl[2]]
+		else:
+			new_pkg = [spl[1],None]
+		packages[spl[0]] = new_pkg
+
+	return packages
+
 
 # Ref : http://code.activestate.com/recipes/577058/
 def query_yes_no(question, default="yes"):
@@ -63,6 +65,7 @@ def query_yes_no(question, default="yes"):
 def get_script_name(name):
 	return './scripts/'+script_name[name]
 
+packages = get_packages()
 
 # terminal prompt
 ques = "Change terminal prompt to \"<user> [<dir>] \" in .bashrc?"
