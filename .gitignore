@@ -87,3 +87,7 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+#Other Local Settings
+settings/config/*
+settings/bash_aliases

@@ -1,9 +1,9 @@
 Tilda,tilda, 
-Wine,wine,ppa,buntu-wine/ppa
+Wine,wine,ppa:ubuntu-wine/ppa
 Winetricks (Wine extension),winetricks 
 Steam,steam
 Git,git
-Sublime3,sublime-text-installer,ppa,ebupd8team/sublime-text-3
+Sublime3,sublime-text-installer,ppa:webupd8team/sublime-text-3
 Linuxdc++,linuxdc++
 Texlive-base,texlive-base
 Texlive-full,texlive-full
@@ -11,3 +11,10 @@ Vlc,vlc
 Synaptic package manager,synaptic
 Java Runtime Environment,default-jre
 Java Development Kit,default-jdk
+Traceroute,traceroute
+Paper Theme,paper-gtk-theme,ppa:snwh/pulp
+Paper Icons,paper-icon-theme
+Numix Theme,numix-gtk-theme,ppa:numix/ppa
+Numix Icons,numix-icon-theme-circle
+Unity Tweak Tool,unity-tweak-tool
+Gnome Tweak Tool,gnome-tweak-tool

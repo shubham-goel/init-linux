@@ -4,7 +4,8 @@ import subprocess
 # Global Vars
 script_name = {
 "prompt":"terminal-prompt.sh",
-"alias":"set-aliases.sh",
+"create-alias":"create-bash_aliases.sh",
+"set-alias":"set-aliases.sh",
 "wifi":"setup-wifi.sh",
 "git":"conf-git.sh",
 "ssh":"setup-ssh.sh",
@@ -23,7 +24,7 @@ def get_packages():
 		if len(spl) >= 3 and spl[2] != '':
 			new_pkg = [spl[1],spl[2]]
 		else:
-			new_pkg = [spl[1],None]
+			new_pkg = [spl[1],""]
 		packages[spl[0]] = new_pkg
 
 	return packages
@@ -80,7 +81,9 @@ if query_yes_no(ques, default = "no"):
 # bash aliases?
 ques = "Create/Reset aliases in .bash_aliases?"
 if query_yes_no(ques, default = "yes"):
-	if subprocess.call([get_script_name("alias")],shell=True) == 1 :
+	if subprocess.call([get_script_name("create-alias")],shell=True) == 1 :
+		print("Exit Status error!")
+	elif subprocess.call([get_script_name("set-alias")],shell=True) == 1 :
 		print("Exit Status error!")
 	else:
 		print("SUCCESS!")
