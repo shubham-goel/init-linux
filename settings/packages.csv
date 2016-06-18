@@ -18,3 +18,6 @@ Numix Theme,numix-gtk-theme,ppa:numix/ppa
 Numix Icons,numix-icon-theme-circle
 Unity Tweak Tool,unity-tweak-tool
 Gnome Tweak Tool,gnome-tweak-tool
+Ubuntu Restricted Extras,ubuntu-restricted-extras
+padevchooser, padevchooser
+gstreamer0.10-pulseaudio, gstreamer0.10-pulseaudio

@@ -54,7 +54,7 @@ def query_yes_no(question, default="yes"):
 
 	while True:
 		# sys.stdout.write(question + prompt)
-		choice = input(question + prompt).lower()
+		choice = raw_input(question + prompt).lower()
 		# print(choice)
 		if default is not None and choice == '':
 			return valid[default]
@@ -102,7 +102,7 @@ if query_yes_no(ques, default = "yes"):
 	for package in packages:
 		ques = "Install " + package + "?"
 		if query_yes_no(ques, default = "yes"):
-			if subprocess.check_call([get_script_name("package") +" "+ str(packages[package][0]) + " "+ str(packages[package][1])],shell=True) == 1 :
+			if subprocess.call([get_script_name("package") +" "+ str(packages[package][0]) + " "+ str(packages[package][1])],shell=True) == 1 :
 				print("Exit Status error!")
 			else:
 				print("SUCCESS!")
@@ -139,7 +139,7 @@ if query_yes_no(ques,default="no"):
 		print("Exit Status error!")
 	else:
 		print("SUCCESS!")
-	if subprocess.check_call([get_script_name("firefox") + " https://github.com/settings/keys"],shell=True) == 1 :
+	if subprocess.call([get_script_name("firefox") + " https://github.com/settings/keys"],shell=True) == 1 :
 		print("Exit Status error!")
 	else:
 		print("SUCCESS!")
