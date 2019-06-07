@@ -1,23 +1,24 @@
-Tilda,tilda, 
-Wine,wine,ppa:ubuntu-wine/ppa
-Winetricks (Wine extension),winetricks 
-Steam,steam
+#Tilda,tilda
+#Wine,wine,ppa:ubuntu-wine/ppa
+#Winetricks (Wine extension),winetricks
+#Steam,steam
 Git,git
 Sublime3,sublime-text-installer,ppa:webupd8team/sublime-text-3
 Linuxdc++,linuxdc++
-Texlive-base,texlive-base
-Texlive-full,texlive-full
+#Texlive-base,texlive-base
+#Texlive-full,texlive-full
 Vlc,vlc
 Synaptic package manager,synaptic
 Java Runtime Environment,default-jre
 Java Development Kit,default-jdk
-Traceroute,traceroute
-Paper Theme,paper-gtk-theme,ppa:snwh/pulp
-Paper Icons,paper-icon-theme
+#Traceroute,traceroute
+#Paper Theme,paper-gtk-theme,ppa:snwh/pulp
+Paper Icons,paper-icon-theme,ppa:snwh/pulp
 Numix Theme,numix-gtk-theme,ppa:numix/ppa
-Numix Icons,numix-icon-theme-circle
-Unity Tweak Tool,unity-tweak-tool
-Gnome Tweak Tool,gnome-tweak-tool
+#Numix Circle Icons,numix-icon-theme-circle,ppa:numix/ppa
+#Unity Tweak Tool,unity-tweak-tool
+#Gnome Tweak Tool,gnome-tweak-tool
 Ubuntu Restricted Extras,ubuntu-restricted-extras
-padevchooser, padevchooser
-gstreamer0.10-pulseaudio, gstreamer0.10-pulseaudio
+#padevchooser, padevchooser
+#gstreamer0.10-pulseaudio, gstreamer0.10-pulseaudio
+Mercurial,mercurial

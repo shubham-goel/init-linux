@@ -3,16 +3,17 @@ import subprocess
 
 # Global Vars
 script_name = {
-"prompt":"terminal-prompt.sh",
-"create-alias":"create-bash_aliases.sh",
-"set-alias":"set-aliases.sh",
-"wifi":"setup-wifi.sh",
-"git":"conf-git.sh",
-"ssh":"setup-ssh.sh",
-"copy-key":"copy-key.sh",
-"firefox":"open-firefox.sh",
-"package":"install-package.sh",
-"chrome":"install-chrome.sh"
+"prompt":		"terminal-prompt.sh",
+"create-alias":	"create-bash_aliases.sh",
+"set-alias":	"set-aliases.sh",
+"wifi":			"setup-wifi.sh",
+"git":			"conf-git.sh",
+"ssh":			"setup-ssh.sh",
+"copy-key":		"copy-key.sh",
+"firefox":		"open-firefox.sh",
+"package":		"install-package.sh",
+"chrome":		"install-chrome.sh",
+"dropbox":		"install-dropbox.sh"
 }
 
 def get_packages():
@@ -20,6 +21,9 @@ def get_packages():
 	with open('settings/packages.csv') as f:
 		content = f.readlines()
 	for line in content:
+		if line[0] == '#':
+			continue
+
 		spl = line.strip().split(',')
 		if len(spl) >= 3 and spl[2] != '':
 			new_pkg = [spl[1],spl[2]]
@@ -109,6 +113,12 @@ if query_yes_no(ques, default = "yes"):
 	ques = "Install Google Chrome?"
 	if query_yes_no(ques, default = "yes"):
 		if subprocess.call([get_script_name("chrome")],shell=True) == 1 :
+			print("Exit Status error!")
+		else:
+			print("SUCCESS!")
+	ques = "Install Dropbox?"
+	if query_yes_no(ques, default = "yes"):
+		if subprocess.call([get_script_name("dropbox")],shell=True) == 1 :
 			print("Exit Status error!")
 		else:
 			print("SUCCESS!")

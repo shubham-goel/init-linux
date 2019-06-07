@@ -5,5 +5,5 @@ function check_quit {
 	fi
 }
 
-sudo cat settings/bash_aliases > .bash_aliases
+sudo cat settings/bash_aliases > ~/.bash_aliases
 check_quit "$?"
